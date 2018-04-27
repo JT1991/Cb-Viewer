@@ -1,23 +1,14 @@
 ﻿@{
-    Layout = null;
-   
-    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Comic book detail";
+
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        <h1>@ViewBag.SeriesTitle</h1>
-        <h2>Issue #@ViewBag.IssueNumber</h2>
-        @if (ViewBag.Artists.Length >0)
-        {
-            <h3>Artists</h3>
+<h1>@ViewBag.SeriesTitle</h1>
+<h2>Issue #@ViewBag.IssueNumber</h2>
+@if (ViewBag.Artists.Length > 0)
+{
+    <h3>Artists</h3>
             <div>
                 <ul>
                     @foreach (var artist in ViewBag.Artists)
@@ -26,9 +17,7 @@
                     }
                 </ul>
             </div>
-        }
-        <h5>Description:</h5>
-        <div>@Html.Raw(ViewBag.description)</div>
-    </div>
-</body>
-</html>
+}
+<h5>Description:</h5>
+<div>@Html.Raw(ViewBag.description)</div>
+
