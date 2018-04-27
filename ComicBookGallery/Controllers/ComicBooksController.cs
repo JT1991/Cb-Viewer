@@ -13,7 +13,7 @@ namespace ComicBookGallery.Controllers
         {
             var comicBook = new ComicBook()
             {
-                SeriesTitle = "The Absolute Sandman, Vol. 1 ",
+                SeriesTitle = "The Absolute Sandman",
                 IssueNumber = 1,
                 DescriptionHtml = @" <p>Reprinting Sandman issues #1-20. With more than 65 pages of bonus material, 
                         including the original proposal for the series and the full script and pencil

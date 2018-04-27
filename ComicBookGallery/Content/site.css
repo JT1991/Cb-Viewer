@@ -16,6 +16,11 @@ textarea {
     max-width: 280px;
 }
 
+.img-responsive {
+    width:70%;
+    height: 70%;
+}
+
 /* Backbar Styles */
 .backbar{
   width: 100%;
