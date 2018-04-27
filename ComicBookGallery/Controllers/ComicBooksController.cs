@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComicBookGallery.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,27 +11,29 @@ namespace ComicBookGallery.Controllers
     {
         public ActionResult Detail()
         {
-
-            ViewBag.SeriesTitle = "The Absolute Sandman, Vol. 1 ";
-            ViewBag.IssueNumber = 1;
-            ViewBag.Description = @" <p>Reprinting Sandman issues #1-20. With more than 65 pages of bonus material, 
-                        including the original proposal for the series and the full script and pencil
-                        art for issue 19. <strong>Released October 11, 2006.</strong> ";
-            ViewBag.Artists = new string[]
+            var comicBook = new ComicBook()
             {
-                "by Neil Gaiman",
-                "Sam Kieth (Illustrator)",
-               " Mike Dringenberg (Illustrator)",
-                "Charles Vess (Illustrator)",
-                "Michael Zulli (Illustrator)",
-               " Kelley Jones (Illustrator)",
-                "Chris Bachalo (Illustrator)",
-               " Malcolm Jones (Illustrator)",
-               " Danny Vozzo (Illustrator)",
-                "Colleen Doran (Illustrator)"
+                SeriesTitle = "The Absolute Sandman, Vol. 1 ",
+                IssueNumber = 1,
+                DescriptionHtml = @" <p>Reprinting Sandman issues #1-20. With more than 65 pages of bonus material, 
+                        including the original proposal for the series and the full script and pencil
+                        art for issue 19. <strong>Released October 11, 2006.</strong> ",
+                Artists = new Artist[]
+                {
+                    new Artist() {Name = "Neil Gaiman", Role="Creator" },
+                    new Artist() {Name = "Sam Kieth", Role="Illustrator" },
+                    new Artist() {Name = "Mike Dringenberg", Role="Illustrator" },
+                    new Artist() {Name = "Charles Vess", Role="Illustrator" },
+                    new Artist() {Name = "Michael Zulli", Role="Illustrator" },
+                    new Artist() {Name = "Kelley Jones", Role="Illustrator" },
+                    new Artist() {Name = "Chris Bachalo", Role="Illustrator" },
+                    new Artist() {Name = "Malcolm Jones", Role="Illustrator" },
+                    new Artist() {Name = "Danny Vozzo", Role="Illustrator" },
+                    new Artist() {Name = "Colleen Doran", Role="Illustrator" }
+                }
             };
 
-            return View();
+            return View(comicBook);
         }
     }
 }
