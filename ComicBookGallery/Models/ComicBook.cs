@@ -9,6 +9,7 @@ namespace ComicBookGallery.Models
     {
         public int Id { get; set; }
         public string SeriesTitle { get; set; }
+        public string IssueTitle { get; set; }
         public int IssueNumber { get; set; }
         public string DescriptionHtml { get; set; }
         public Artist[] Artists { get; set; }
