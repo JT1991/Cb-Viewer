@@ -1,24 +1,7 @@
 ﻿@{
     Layout = null;
-    var seriesTitle = "The Absolute Sandman, Vol. 1 ";
-    var issueNumber = 1;
-    var description = @" <p>Reprinting Sandman issues #1-20. With more than 65 pages of bonus material, 
-                        including the original proposal for the series and the full script and pencil
-                        art for issue 19. <strong>Released October 11, 2006.</strong> ";
-    var artists = new string[]
-    {
-        "by Neil Gaiman",
-        "Sam Kieth (Illustrator)",
-       " Mike Dringenberg (Illustrator)",
-        "Charles Vess (Illustrator)",
-        "Michael Zulli (Illustrator)",
-       " Kelley Jones (Illustrator)",
-        "Chris Bachalo (Illustrator)",
-       " Malcolm Jones (Illustrator)",
-       " Danny Vozzo (Illustrator)",
-        "Colleen Doran (Illustrator)"
-
-    };
+   
+    
 }
 
 <!DOCTYPE html>
@@ -30,14 +13,14 @@
 </head>
 <body>
     <div>
-        <h1>@seriesTitle</h1>
-        <h2>Issue #@issueNumber</h2>
-        @if (artists.Length >0)
+        <h1>@ViewBag.SeriesTitle</h1>
+        <h2>Issue #@ViewBag.IssueNumber</h2>
+        @if (ViewBag.Artists.Length >0)
         {
             <h3>Artists</h3>
             <div>
                 <ul>
-                    @foreach (var artist in artists)
+                    @foreach (var artist in ViewBag.Artists)
                     {
                         <li> * @artist</li>
                     }
@@ -45,7 +28,7 @@
             </div>
         }
         <h5>Description:</h5>
-        <div>@Html.Raw(description)</div>
+        <div>@Html.Raw(ViewBag.description)</div>
     </div>
 </body>
 </html>
