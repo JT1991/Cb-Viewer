@@ -12,7 +12,8 @@ namespace ComicBookGallery.Data
             {
                 new ComicBook()
                 {
-                    SeriesTitle = "The Absolute Sandman",
+                    Id = 1,
+                    SeriesTitle = "Sandman",
                     IssueTitle = "Preludes and Nocturnes",
                     IssueNumber = 1,
                     DescriptionHtml = @" <p>New York Times best-selling author Neil Gaiman's transcendent series SANDMAN is often hailed as the definitive
@@ -34,9 +35,10 @@ namespace ComicBookGallery.Data
                 },
                  new ComicBook()
                 {
-                    SeriesTitle = "The Absolute Sandman",
+                    Id = 2,
+                    SeriesTitle = "Sandman",
                     IssueTitle = "The Doll's House",
-                    IssueNumber = 1,
+                    IssueNumber = 2,
                     DescriptionHtml = @" A being who has existed since the beginning of the universe, Dream of the Endless rules over the realm of dreams. In THE DOLL’S HOUSE, after a decades-long imprisonment, 
                                         the Sandman has returned to find that a few dreams and nightmares have escaped to reality. Looking to recapture his lost possessions, Morpheus ventures to the human plane 
                                         only to learn that a woman named Rose Walker has inadvertently become a dream vortex and threatens to rip apart his world. Now as Morpheus takes on the last escaped nightmare 
@@ -66,6 +68,11 @@ namespace ComicBookGallery.Data
                 }
             }
             return comicBookToReturn;
+        }
+
+        public ComicBook[] GetComicBooks()
+        {
+            return _comicBooks;
         }
     }
 }
